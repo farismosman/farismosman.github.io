@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Testing Scientific Code: An Introduction - Faris Mohammed</title>
+  <meta name="author" content="Faris Mohammed">
+
+  
+  <meta name="description" content="The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Faris Mohammed" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:farismosman.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+    <li><a href="/">
+        <span class="blue_light">
+            Faris Mohammed
+        </span>
+       
+           <span class="blue_dark">
+             -- programmer and science addict
+           </span>
+       
+    </a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Testing Scientific Code: An Introduction</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-11T14:20:00+03:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results achieved in the conducted research. In most of the cases, If not all, computer programs are involved to either simulate or analyze experimental data. In the world of science <a href="http://href.li/?http://www.nature.com/news/2010/101013/full/467775a.html">we hear news here and there about deadly mistakes</a> committed unintentionally by researchers and scientists.</p>
+
+<p>For instance, a leaked study reveals scientists have overestimated the global warming effect. Unfortunately, the study was used in making political decisions and perhaps to discredit some existing theories. Eventually all the blame goes to the computers, and <a href="http://href.li/?http://www.dailymail.co.uk/news/article-2420783/Worlds-climate-scientists-confess-Global-warming-just-QUARTER-thought--computers-got-effects-greenhouse-gases-wrong.html">I quote the world’s top climate scientists:</a></p>
+
+<blockquote><p>Global warming is just quarter what we thought – and COMPUTERS got the effects of greenhouse gases wrong.</p></blockquote>
+
+<p>This became a true challenge for the scientific community since recurring mistakes will jeopardize the trust between public and scientists.</p>
+
+<h3>Absence of design concepts</h3>
+
+<p>An <a href="http://href.li/?http://dl.acm.org/citation.cfm?id=1556928&amp;CFID=258036201&amp;CFTOKEN=74886012">online survey</a> was conducted on about 2000 researchers varying from students to senior academics that use computer programs in their research. The outcome of the survey revealed that most of the coding they do is self-taught, which means all what they have learnt is how to write code. The concepts of good design and clean code are absolutely absent in this case, and what is worse that they don’t even know that they are bad programmers.</p>
+
+<p>Moreover, scientists do not test their code intensively and they hardly release it so others can test or try to reproduce published results. As a matter of fact, researchers usually use their terrible code with bugs and errors that do not break the program, but could affects the results drastically.</p>
+
+<h3>Current testing techniques</h3>
+
+<p>Indeed, there are different ways to verify that the obtained results are acceptable in a scientific sense. For instance comparing the results with previously published results is one way of authenticating them. That kind of review is usually performed at a later stage after months of work or perhaps after submitting a report.</p>
+
+<p>However, during the development phase, scientists tend to debug and test their code in two different ways:</p>
+
+<p>1-    Manually test the code. An example of this way putting print statements as breaking points or using interactive environments in the case of dynamically typed languages such as python. That is relatively impractical and less informative because a small change in one function might cause a failure somewhere else.</p>
+
+<p>2-    Writing system tests that cover a big chunk of the program. To give an example, I consider a test written in the widely used and poorly tested numerical package, <a href="http://href.li/?https://github.com/numpy/numpy/blob/master/numpy/tests/test_ctypeslib.py"><em>numpy</em></a>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@dec.skipif</span><span class="p">(</span><span class="ow">not</span> <span class="n">_HAS_CTYPE</span><span class="p">,</span> <span class="s">&quot;ctypes not available on this python installation&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="nd">@dec.knownfailureif</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">==</span><span class="s">&#39;cygwin&#39;</span><span class="p">,</span> <span class="s">&quot;This test is known to fail on cygwin&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">test_basic2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Regression for #801: load_library with a full library name (including extension) does not work.&quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="k">try</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">try</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">so</span> <span class="o">=</span> <span class="n">get_shared_lib_extension</span><span class="p">(</span><span class="n">is_python_ext</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>            <span class="n">cdll</span> <span class="o">=</span> <span class="n">load_library</span><span class="p">(</span><span class="s">&#39;multiarray</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">so</span><span class="p">,</span>
+</span><span class='line'>                                <span class="n">np</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">multiarray</span><span class="o">.</span><span class="n">__file__</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">print</span><span class="p">(</span><span class="s">&quot;No distutils available, skipping test.&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;ctypes is not available on this python: skipping the test&quot;</span> \
+</span><span class='line'>              <span class="s">&quot; (import error was: </span><span class="si">%s</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The previous approach is good way to make sure that the program is performing as expected. However the way the test was implemented needs to be tested (the test logic does not asserting anything, it rather catches exceptions). This is a symptom that the code might have uncaught bugs. Moreover, it is hard to maintain due to lack of proper unit-test coverage.</p>
+
+<h3>The way to go</h3>
+
+<p>Recently, <a href="http://href.li/?http://esmesh.wordpress.com/2012/04/09/examining-random-and-designed-tests-to-detect-code-mistakes-in-scientific-software/">debugging and testing code written by scientists</a> has become a serious concern due to the importance of the research. For instance, <a href="http://href.li/?http://www.nature.com/news/mozilla-plan-seeks-to-debug-scientific-code-1.13812">Mozilla plan seeks to debug scientific code</a>. Although the idea sounds good, but it has its downsides; professional programmers trying to understand the Quantum theory of the early universe so they can figure out what went wrong in the code. I personally think it is easier to convince and teach scientists how to do it the right way rather than teaching programmers scientific concepts and expect them convince scientists that is how it should be done.</p>
+
+<p>This post is an introduction to a series of articles that aim to introduce a different approach to the one traditionally followed in developing scientific programs. In the following articles we will model and numerically solve the famous quantum well problem. The ultimate goal of this series is to cover different aspects of test-driven development and object-oriented programing. So we can achieve better design that simulates the reality and good test coverage that helps avoiding devastating errors at later stages.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Faris Mohammed</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-11T14:20:00+03:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/" data-via="farismosman" data-counturl="http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/11/11/modeling-the-quantum-well/" title="Next Post: Modeling The Quantum Well">Modeling The Quantum Well &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/modeling-the-quantum-well/">Modeling The Quantum Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/testing-scientific-code-an-introduction/">Testing Scientific Code: An Introduction</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'farismosman',
+            count: ,
+            skip_forks: ,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/farismosman@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Faris Mohammed -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

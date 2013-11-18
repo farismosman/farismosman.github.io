@@ -1,101 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Faris Mohammed</title>
-  <meta name="author" content="Faris Mohammed">
-
-  
-  <meta name="description" content="The quantum well problem or the particle in a box is one of the most fundamental problems in the world of quantum physics. However, we are intending &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://farismosman.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Faris Mohammed" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:farismosman.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-    <li><a href="/">
-        <span class="blue_light">
-            Faris Mohammed
-        </span>
-       
-           <span class="blue_dark">
-             -- programmer and science addict
-           </span>
-       
-    </a></li>
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Faris Mohammed]]></title>
+  <link href="http://farismosman.github.io/atom.xml" rel="self"/>
+  <link href="http://farismosman.github.io/"/>
+  <updated>2013-11-18T10:19:32+03:00</updated>
+  <id>http://farismosman.github.io/</id>
+  <author>
+    <name><![CDATA[Faris Mohammed]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2013/11/11/modeling-the-quantum-well/">Modeling the Quantum Well</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-11-11T15:14:00+03:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well problem or the particle in a box</a> is one of the most fundamental problems in the world of quantum physics. However, we are intending to discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit-test, clean code refactoring and good design.</p>
+  <entry>
+    <title type="html"><![CDATA[Modeling The Quantum Well]]></title>
+    <link href="http://farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well/"/>
+    <updated>2013-11-11T15:14:00+03:00</updated>
+    <id>http://farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well problem or the particle in a box</a> is one of the most fundamental problems in the world of quantum physics. However, we are intending to discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit-test, clean code refactoring and good design.</p>
 
 <p>From the basics of quantum mechanics, the quantum well has width <em>(a)</em> and potential <em>(V = 0)</em> within its boundaries. Beyond the boundaries the potential is infinite. According the quantum theory, a particle inside the well is allowed to occupy a discrete set of energy levels known as the eigenstates. If we think of those states as horizontal lines connecting the walls of the well, the bottommost energy level would be the ground state, which represents the lowest possible energy level.</p>
 
@@ -350,42 +273,15 @@
 <p>The first piece of functionality has been successfully implemented. A closer look at the test makes the reader realize that it is not just a test, it is rather a document that describes the expected behaviour of certain method. Moreover, it is a checkpoint that makes sure all future changes in the code-base will not break any of the existing features.</p>
 
 <p>In the next article we follow the same strategy to implement the second piece which deals with the numerical algorithm that solves Schrödinger equation.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/11/testing-scientific-code-an-introduction/">Testing Scientific Code: An Introduction</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-11T14:20:00+03:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results achieved in the conducted research. In most of the cases, If not all, computer programs are involved to either simulate or analyze experimental data. In the world of science <a href="http://href.li/?http://www.nature.com/news/2010/101013/full/467775a.html">we hear news here and there about deadly mistakes</a> committed unintentionally by researchers and scientists.</p>
+  <entry>
+    <title type="html"><![CDATA[Testing Scientific Code: An Introduction]]></title>
+    <link href="http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/"/>
+    <updated>2013-11-11T14:20:00+03:00</updated>
+    <id>http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction</id>
+    <content type="html"><![CDATA[<p>The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results achieved in the conducted research. In most of the cases, If not all, computer programs are involved to either simulate or analyze experimental data. In the world of science <a href="http://href.li/?http://www.nature.com/news/2010/101013/full/467775a.html">we hear news here and there about deadly mistakes</a> committed unintentionally by researchers and scientists.</p>
 
 <p>For instance, a leaked study reveals scientists have overestimated the global warming effect. Unfortunately, the study was used in making political decisions and perhaps to discredit some existing theories. Eventually all the blame goes to the computers, and <a href="http://href.li/?http://www.dailymail.co.uk/news/article-2420783/Worlds-climate-scientists-confess-Global-warming-just-QUARTER-thought--computers-got-effects-greenhouse-gases-wrong.html">I quote the world’s top climate scientists:</a></p>
 
@@ -449,125 +345,7 @@
 <p>Recently, <a href="http://href.li/?http://esmesh.wordpress.com/2012/04/09/examining-random-and-designed-tests-to-detect-code-mistakes-in-scientific-software/">debugging and testing code written by scientists</a> has become a serious concern due to the importance of the research. For instance, <a href="http://href.li/?http://www.nature.com/news/mozilla-plan-seeks-to-debug-scientific-code-1.13812">Mozilla plan seeks to debug scientific code</a>. Although the idea sounds good, but it has its downsides; professional programmers trying to understand the Quantum theory of the early universe so they can figure out what went wrong in the code. I personally think it is easier to convince and teach scientists how to do it the right way rather than teaching programmers scientific concepts and expect them convince scientists that is how it should be done.</p>
 
 <p>This post is an introduction to a series of articles that aim to introduce a different approach to the one traditionally followed in developing scientific programs. In the following articles we will model and numerically solve the famous quantum well problem. The ultimate goal of this series is to cover different aspects of test-driven development and object-oriented programing. So we can achieve better design that simulates the reality and good test coverage that helps avoiding devastating errors at later stages.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/11/11/modeling-the-quantum-well/">Modeling The Quantum Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/11/testing-scientific-code-an-introduction/">Testing Scientific Code: An Introduction</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'farismosman',
-            count: ,
-            skip_forks: ,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/farismosman@gmail.com?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Faris Mohammed -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
