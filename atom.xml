@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Faris Mohammed]]></title>
-  <link href="http://farismosman.github.io/atom.xml" rel="self"/>
-  <link href="http://farismosman.github.io/"/>
-  <updated>2013-11-19T11:21:45+03:00</updated>
-  <id>http://farismosman.github.io/</id>
+  <link href="farismosman.github.io/atom.xml" rel="self"/>
+  <link href="farismosman.github.io/"/>
+  <updated>2013-11-19T12:58:30+03:00</updated>
+  <id>farismosman.github.io/</id>
   <author>
     <name><![CDATA[Faris Mohammed]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Modeling The Quantum Well]]></title>
-    <link href="http://farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well/"/>
+    <link href="farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well/"/>
     <updated>2013-11-11T15:14:00+03:00</updated>
-    <id>http://farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well</id>
+    <id>farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well problem or the particle in a box</a> is one of the most fundamental problems in the world of quantum physics. However, we are intending to discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit-test, clean code refactoring and good design.</p>
 
 <p>From the basics of quantum mechanics, the quantum well has width <em>(a)</em> and potential <em>(V = 0)</em> within its boundaries. Beyond the boundaries the potential is infinite. According the quantum theory, a particle inside the well is allowed to occupy a discrete set of energy levels known as the eigenstates. If we think of those states as horizontal lines connecting the walls of the well, the bottommost energy level would be the ground state, which represents the lowest possible energy level.</p>
@@ -278,9 +278,9 @@
   
   <entry>
     <title type="html"><![CDATA[Testing Scientific Code: An Introduction]]></title>
-    <link href="http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/"/>
+    <link href="farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/"/>
     <updated>2013-11-11T14:20:00+03:00</updated>
-    <id>http://farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction</id>
+    <id>farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction</id>
     <content type="html"><![CDATA[<p>The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results achieved in the conducted research. In most of the cases, If not all, computer programs are involved to either simulate or analyze experimental data. In the world of science <a href="http://href.li/?http://www.nature.com/news/2010/101013/full/467775a.html">we hear news here and there about deadly mistakes</a> committed unintentionally by researchers and scientists.</p>
 
 <p>For instance, a leaked study reveals scientists have overestimated the global warming effect. Unfortunately, the study was used in making political decisions and perhaps to discredit some existing theories. Eventually all the blame goes to the computers, and <a href="http://href.li/?http://www.dailymail.co.uk/news/article-2420783/Worlds-climate-scientists-confess-Global-warming-just-QUARTER-thought--computers-got-effects-greenhouse-gases-wrong.html">I quote the world’s top climate scientists:</a></p>

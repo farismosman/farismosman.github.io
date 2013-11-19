@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://farismosman.github.io/sitemap.xml 
+Sitemap: farismosman.github.io/sitemap.xml 
