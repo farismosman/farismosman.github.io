@@ -4,7 +4,7 @@
   <title><![CDATA[Faris Mohammed]]></title>
   <link href="farismosman.github.io/atom.xml" rel="self"/>
   <link href="farismosman.github.io/"/>
-  <updated>2013-11-19T13:12:40+03:00</updated>
+  <updated>2013-11-19T13:39:40+03:00</updated>
   <id>farismosman.github.io/</id>
   <author>
     <name><![CDATA[Faris Mohammed]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Modeling The Quantum Well]]></title>
-    <link href="farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well/"/>
+    <link href="farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well"/>
     <updated>2013-11-11T15:14:00+03:00</updated>
     <id>farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well problem or the particle in a box</a> is one of the most fundamental problems in the world of quantum physics. However, we are intending to discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit-test, clean code refactoring and good design.</p>
@@ -278,7 +278,7 @@
   
   <entry>
     <title type="html"><![CDATA[Testing Scientific Code: An Introduction]]></title>
-    <link href="farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction/"/>
+    <link href="farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction"/>
     <updated>2013-11-11T14:20:00+03:00</updated>
     <id>farismosman.github.io/blog/2013/11/11/testing-scientific-code-an-introduction</id>
     <content type="html"><![CDATA[<p>The importance of scientific research is undeniable since major environmental, financial and political decisions are made based on the results achieved in the conducted research. In most of the cases, If not all, computer programs are involved to either simulate or analyze experimental data. In the world of science <a href="http://href.li/?http://www.nature.com/news/2010/101013/full/467775a.html">we hear news here and there about deadly mistakes</a> committed unintentionally by researchers and scientists.</p>
