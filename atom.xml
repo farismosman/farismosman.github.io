@@ -4,7 +4,7 @@
   <title><![CDATA[Faris Mohammed]]></title>
   <link href="farismosman.github.io/atom.xml" rel="self"/>
   <link href="farismosman.github.io/"/>
-  <updated>2013-11-20T17:06:54+03:00</updated>
+  <updated>2013-11-25T11:15:30+03:00</updated>
   <id>farismosman.github.io/</id>
   <author>
     <name><![CDATA[Faris Mohammed]]></name>
@@ -18,7 +18,7 @@
     <link href="farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well"/>
     <updated>2013-11-11T15:14:00+03:00</updated>
     <id>farismosman.github.io/blog/2013/11/11/modeling-the-quantum-well</id>
-    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well problem or the particle in a box</a> is one of the most fundamental problems in the world of quantum physics. However, we are intending to discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit-test, clean code refactoring and good design.</p>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Particle_in_a_box">The quantum well or particle in a box problem </a> is one of the most fundamental problems in the world of quantum physics. However, we will not discuss the physics aspects of the problem, we will rather tackle it from a modelling point of view. As a continuation of the previous article, the problem will be used to demonstrate some programming concepts such as unit testing, clean code, refactoring and good design.</p>
 
 <p>From the basics of quantum mechanics, the quantum well has width <em>(a)</em> and potential <em>(V = 0)</em> within its boundaries. Beyond the boundaries the potential is infinite. According the quantum theory, a particle inside the well is allowed to occupy a discrete set of energy levels known as the eigenstates. If we think of those states as horizontal lines connecting the walls of the well, the bottommost energy level would be the ground state, which represents the lowest possible energy level.</p>
 
@@ -57,7 +57,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>At the top of the file we have imported unittest which is a python library that helps you unit-test your code. In the second line we have imported QuantumWell from src.quantum_well. However this QuantumWell class has no logic yet apart from the following few lines:</p>
+<p>At the top of the file we have imported unittest, which is a python library that helps you unit-test your code. In the second line we have imported QuantumWell from src.quantum_well. However this QuantumWell class has no logic yet apart from the following few lines:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -66,7 +66,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Back to our test, we have created a class called TestQuantumWell that contains tests for all the methods in the QuantumWell class. The class inherits from unittest.TestCase which enables our class to access all methods TestCase.</p>
+<p>Back to our test, we have created a class called TestQuantumWell that contains tests for all the methods in the QuantumWell class. The class inherits from unittest.TestCase which enables our class to access all TestCase methods.</p>
 
 <p>The test itself is a method that starts with the word test followed by the name of the method it is testing (in the case of the example above it is testing the constructor) then the scenario that is covered in the test. The test content is divided into three parts; the first part is to set all test requirements, the second part is to execute the method that needs to be tested and finally the assertion which assures that method is doing what we expect it to do.</p>
 
@@ -195,10 +195,10 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_potential_should_be_zero_at_the_wall_of_quantum_well</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">test_potential_should_be_infinity_at_the_wall_of_quantum_well</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span class='line'>    <span class="n">quantum_well</span> <span class="o">=</span> <span class="n">QuantumWell</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </span><span class='line'>    <span class="n">potential</span> <span class="o">=</span> <span class="n">quantum_well</span><span class="o">.</span><span class="n">potential</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">potential</span><span class="p">)</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s">&#39;inf&#39;</span><span class="p">),</span> <span class="n">potential</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -217,7 +217,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>A final scenario to test is the potentail outside the well. We prefer to split the test into two separate cases, the potential to the left and the right:</p>
+<p>A final scenario to test is the potential outside the well. We prefer to split the test into two separate cases, the potential to the left and the right:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -263,10 +263,12 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">potential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
 </span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">position</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">:</span>
 </span><span class='line'>        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s">&#39;inf&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="mi">0</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
