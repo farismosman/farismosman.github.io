@@ -4,7 +4,7 @@
   <title><![CDATA[Faris Mohammed]]></title>
   <link href="farismosman.github.io/atom.xml" rel="self"/>
   <link href="farismosman.github.io/"/>
-  <updated>2013-11-25T11:15:30+03:00</updated>
+  <updated>2013-11-25T11:30:04+03:00</updated>
   <id>farismosman.github.io/</id>
   <author>
     <name><![CDATA[Faris Mohammed]]></name>
@@ -32,7 +32,7 @@
 
 <p>We will start simple by creating a directory called quantum-well to serve as the root for the project. Inside the root we have two subdirectories; src and test. The first contains all classes and the modules used in finding the solution to the problem. The later has all the unit tests. In both folders we created a file called <em><em>init</em>.py</em> which indicates that the containing directory is a package.</p>
 
-<h3>The first unit-test</h3>
+<h3>The first unit test</h3>
 
 <p>The approach to the problem is different form what is usually followed; no method is implemented until a test is written. As starter, we would like to test that each initialized Quantum Well should have an attribute called width. Therefore inside test directory we create a file called <em>test_quantum_well.py</em> with the following code contained in it:</p>
 
@@ -117,6 +117,8 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>The strategy we have followed in the previous test ensures that no production code is written without having a test for that particular piece, which guarantees a high test coverage.</p>
+
 <h3>Asserting Exceptions</h3>
 
 <p>That is not the end of the story though. We are not supposed to be able to create a quantum well with a negative width. Thus, we write the following test to assure that the initialization fails when a negative width is passed:</p>
@@ -141,7 +143,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The other scenario that needs to be tested, is the fact that the width can not be zero either,</p>
+<p>The other scenario that needs to be tested, is the fact that the width can not be zero either:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -189,7 +191,7 @@
 
 <p>Yes that&rsquo;s it. That&rsquo;s enough to make the test pass. It is worth noting that the argument takes self which indicates that the method is an instance method. In other words, the method operates only on a quantum well object.</p>
 
-<p>Now we need to cover the second scenario where the potential at the boundaries of the well is infinity,</p>
+<p>Now we need to cover the second scenario where the potential at the boundaries of the well is infinity:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
